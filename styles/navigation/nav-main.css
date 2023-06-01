@@ -1,3 +1,5 @@
+@import url(/styles/navigation/nav-tablet.css);
+
 nav {
   background: rgb(37, 37, 37);
   padding: 0 15px;
@@ -102,7 +104,3 @@ a {
 .submenu-active {
   background-color: black;
 }
-/* 
-* {
-  border: 1px solid gray;
-} */
