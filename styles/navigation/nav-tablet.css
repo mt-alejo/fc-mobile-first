@@ -9,7 +9,7 @@
   .item.button {
     width: auto;
     order: 1;
-    /* display: block; */
+    display: block;
   }
 
   .toggle {

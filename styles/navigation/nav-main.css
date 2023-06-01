@@ -1,4 +1,5 @@
 @import url(/styles/navigation/nav-tablet.css);
+@import url(/styles/navigation/nav-desktop.css);
 
 nav {
   background: rgb(37, 37, 37);
@@ -81,6 +82,7 @@ a {
 
 .submenu-active .submenu {
   display: block;
+  width: 100%;
 }
 
 .has-submenu li {
