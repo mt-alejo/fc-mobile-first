@@ -7,7 +7,7 @@ function toggleMenu() {
     toggle.querySelector("a").innerHTML = "<i class='fas fa-bars'></i>";
   } else {
     menu.classList.add("active");
-    toggle.querySelector("a").innerHTML = "<i>X</i>";
+    toggle.querySelector("a").innerHTML = "<i class='fas fa-times'></i>";
   }
 }
 
@@ -24,7 +24,6 @@ function toggleItem() {
   } else {
     this.classList.add("submenu-active");
   }
-  console.log(this.classList);
 }
 
 //LMAO CODE:
@@ -34,3 +33,17 @@ for (let item of items) {
     item.addEventListener("click", toggleItem, false);
   }
 }
+
+function closeSubmenu(e) {
+  if (menu.querySelector(".submenu-active")) {
+    let isClickInside = menu
+      .querySelector(".submenu-active")
+      .contains(e.target);
+    console.log(isClickInside);
+    if (!isClickInside && menu.querySelector(".submenu-active")) {
+      menu.querySelector(".submenu-active").classList.remove("submenu-active");
+    }
+  }
+}
+
+document.addEventListener("click", closeSubmenu, false);
